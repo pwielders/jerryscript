@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Arguments">
+      <UniqueIdentifier>{033c9989-d4c5-4a7c-82a4-03e315832708}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arguments\Header Files">
+      <UniqueIdentifier>{b42b3496-19d9-4303-bb35-a988a0715fd4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arguments\Source Files">
+      <UniqueIdentifier>{4bd676db-68b7-424f-bf6b-4cc90ba8600f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main-desktop.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="arguments\cli.c">
+      <Filter>Arguments\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="arguments\options.c">
+      <Filter>Arguments\Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="arguments\cli.h">
+      <Filter>Arguments\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="arguments\options.h">
+      <Filter>Arguments\Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

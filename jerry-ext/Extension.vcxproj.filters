@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Arg">
+      <UniqueIdentifier>{a594971f-c71c-4c77-8c48-45cadee54c1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{1d933153-5f48-476d-b917-9ef555b8df2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Debugger">
+      <UniqueIdentifier>{9fb9c7af-8524-4ac6-b809-ed18785a4615}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arg\Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Arg\Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Common\Header Files">
+      <UniqueIdentifier>{52fe54c8-4322-4836-8b3a-dfd36dcd01a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Debugger\Source Files">
+      <UniqueIdentifier>{706ec68b-4c66-4655-b933-a95eaaeca68c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Debugger\Header Files">
+      <UniqueIdentifier>{69637a30-5b0c-45a0-ba85-d3bc15bc9801}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{68563d3b-d214-4526-812b-56fc7c30a35c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\Source Files">
+      <UniqueIdentifier>{ce0d4cc7-7c0d-489d-9a97-70b047c9bc40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Module">
+      <UniqueIdentifier>{e49538bc-cf81-40ab-b9b8-4b4c40272952}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include">
+      <UniqueIdentifier>{05852d4d-25ac-4285-bcc9-dca868518935}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Module\Source Files">
+      <UniqueIdentifier>{26f406f0-1993-4081-ad13-1756c1ea03b0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="arg\arg-internal.h">
+      <Filter>Arg\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="common\jext-common.h">
+      <Filter>Common\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="debugger\debugger-sha1.h">
+      <Filter>Debugger\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jerryscript-ext\arg.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jerryscript-ext\arg.impl.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jerryscript-ext\autorelease.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jerryscript-ext\autorelease.impl.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jerryscript-ext\debugger.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jerryscript-ext\handlers.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jerryscript-ext\handle-scope.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jerryscript-ext\module.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jerryscript-ext\print.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jerryscript-ext\properties.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jerryscript-ext\repl.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jerryscript-ext\sources.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\jerryscript-ext\test262.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="arg\arg.c">
+      <Filter>Arg\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="arg\arg-js-iterator-helper.c">
+      <Filter>Arg\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="arg\arg-transform-functions.c">
+      <Filter>Arg\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debugger\debugger-common.c">
+      <Filter>Debugger\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debugger\debugger-rp.c">
+      <Filter>Debugger\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debugger\debugger-serial.c">
+      <Filter>Debugger\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debugger\debugger-sha1.c">
+      <Filter>Debugger\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debugger\debugger-tcp.c">
+      <Filter>Debugger\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debugger\debugger-ws.c">
+      <Filter>Debugger\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="util\handlers.c">
+      <Filter>Util\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="util\print.c">
+      <Filter>Util\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="util\properties.c">
+      <Filter>Util\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="util\repl.c">
+      <Filter>Util\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="util\sources.c">
+      <Filter>Util\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="util\test262.c">
+      <Filter>Util\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="module\module.c">
+      <Filter>Module\Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

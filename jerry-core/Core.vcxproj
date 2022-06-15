@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{0a153a1e-0a1a-4a47-8d9e-051d37792ca0}</ProjectGuid>
+    <RootNamespace>Core</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Core</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)include\;$(ProjectDir)jrt\;$(ProjectDir)debugger\;$(ProjectDir)vm\;$(ProjectDir)jcontext\;$(ProjectDir)lit\;$(ProjectDir)parser\js\;$(ProjectDir)parser\regexp\;$(ProjectDir)jmem;$(ProjectDir)api\;$(ProjectDir)ecma\base\;$(ProjectDir)ecma\operations\;$(ProjectDir)ecma\builtin-objects\;$(ProjectDir)ecma\builtin-objects\typedarray\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)include\;$(ProjectDir)jrt\;$(ProjectDir)debugger\;$(ProjectDir)vm\;$(ProjectDir)jcontext\;$(ProjectDir)lit\;$(ProjectDir)parser\js\;$(ProjectDir)parser\regexp\;$(ProjectDir)jmem;$(ProjectDir)api\;$(ProjectDir)ecma\base\;$(ProjectDir)ecma\operations\;$(ProjectDir)ecma\builtin-objects\;$(ProjectDir)ecma\builtin-objects\typedarray\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)include\;$(ProjectDir)jrt\;$(ProjectDir)debugger\;$(ProjectDir)vm\;$(ProjectDir)jcontext\;$(ProjectDir)lit\;$(ProjectDir)parser\js\;$(ProjectDir)parser\regexp\;$(ProjectDir)jmem;$(ProjectDir)api\;$(ProjectDir)ecma\base\;$(ProjectDir)ecma\operations\;$(ProjectDir)ecma\builtin-objects\;$(ProjectDir)ecma\builtin-objects\typedarray\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)include\;$(ProjectDir)jrt\;$(ProjectDir)debugger\;$(ProjectDir)vm\;$(ProjectDir)jcontext\;$(ProjectDir)lit\;$(ProjectDir)parser\js\;$(ProjectDir)parser\regexp\;$(ProjectDir)jmem;$(ProjectDir)api\;$(ProjectDir)ecma\base\;$(ProjectDir)ecma\operations\;$(ProjectDir)ecma\builtin-objects\;$(ProjectDir)ecma\builtin-objects\typedarray\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="api\jerry-snapshot.h" />
+    <ClInclude Include="config.h" />
+    <ClInclude Include="debugger\debugger.h" />
+    <ClInclude Include="ecma\base\ecma-alloc.h" />
+    <ClInclude Include="ecma\base\ecma-error-messages.inc.h" />
+    <ClInclude Include="ecma\base\ecma-errors.h" />
+    <ClInclude Include="ecma\base\ecma-extended-info.h" />
+    <ClInclude Include="ecma\base\ecma-gc.h" />
+    <ClInclude Include="ecma\base\ecma-globals.h" />
+    <ClInclude Include="ecma\base\ecma-helpers-number.h" />
+    <ClInclude Include="ecma\base\ecma-helpers.h" />
+    <ClInclude Include="ecma\base\ecma-init-finalize.h" />
+    <ClInclude Include="ecma\base\ecma-lcache.h" />
+    <ClInclude Include="ecma\base\ecma-line-info.h" />
+    <ClInclude Include="ecma\base\ecma-literal-storage.h" />
+    <ClInclude Include="ecma\base\ecma-module.h" />
+    <ClInclude Include="ecma\base\ecma-property-hashmap.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-aggregateerror-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-aggregateerror.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-array-iterator-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-array-prototype-unscopables.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-array-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-array.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-arraybuffer-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-arraybuffer.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-async-from-sync-iterator-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-async-function-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-async-function.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-async-generator-function.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-async-generator-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-async-generator.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-async-iterator-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-atomics.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-bigint-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-bigint.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-boolean-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-boolean.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-dataview-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-dataview.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-date-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-date.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-error-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-error.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-evalerror-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-evalerror.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-function-prototype.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-function-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-function.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-generator-function.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-generator-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-generator.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-global.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-handlers.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-handlers.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-helpers-macro-defines.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-helpers-macro-undefs.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-helpers.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-internal-routines-template.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-intrinsic.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-iterator-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-json.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-map-iterator-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-map-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-map.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-math.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-number-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-number.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-object-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-object.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-object.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-promise-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-promise.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-proxy.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-rangeerror-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-rangeerror.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-referenceerror-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-referenceerror.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-reflect.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-regexp-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-regexp-string-iterator-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-regexp.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-set-iterator-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-set-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-set.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-shared-arraybuffer-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-shared-arraybuffer.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-string-iterator-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-string-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-string.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-symbol-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-symbol.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-syntaxerror-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-syntaxerror.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-type-error-thrower.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-typeerror-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-typeerror.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-urierror-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-urierror.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-weakmap-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-weakmap.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-weakref-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-weakref.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-weakset-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtin-weakset.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtins-internal.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtins.h" />
+    <ClInclude Include="ecma\builtin-objects\ecma-builtins.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\typedarray\ecma-builtin-bigint64array-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\typedarray\ecma-builtin-bigint64array.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\typedarray\ecma-builtin-biguint64array-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\typedarray\ecma-builtin-biguint64array.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\typedarray\ecma-builtin-float32array-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\typedarray\ecma-builtin-float32array.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\typedarray\ecma-builtin-float64array-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\typedarray\ecma-builtin-float64array.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\typedarray\ecma-builtin-int16array-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\typedarray\ecma-builtin-int16array.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\typedarray\ecma-builtin-int32array-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\typedarray\ecma-builtin-int32array.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\typedarray\ecma-builtin-int8array-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\typedarray\ecma-builtin-int8array.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\typedarray\ecma-builtin-typedarray-helpers.h" />
+    <ClInclude Include="ecma\builtin-objects\typedarray\ecma-builtin-typedarray-prototype-template.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\typedarray\ecma-builtin-typedarray-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\typedarray\ecma-builtin-typedarray-template.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\typedarray\ecma-builtin-typedarray.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\typedarray\ecma-builtin-uint16array-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\typedarray\ecma-builtin-uint16array.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\typedarray\ecma-builtin-uint32array-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\typedarray\ecma-builtin-uint32array.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\typedarray\ecma-builtin-uint8array-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\typedarray\ecma-builtin-uint8array.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\typedarray\ecma-builtin-uint8clampedarray-prototype.inc.h" />
+    <ClInclude Include="ecma\builtin-objects\typedarray\ecma-builtin-uint8clampedarray.inc.h" />
+    <ClInclude Include="ecma\operations\ecma-arguments-object.h" />
+    <ClInclude Include="ecma\operations\ecma-array-object.h" />
+    <ClInclude Include="ecma\operations\ecma-arraybuffer-object.h" />
+    <ClInclude Include="ecma\operations\ecma-async-generator-object.h" />
+    <ClInclude Include="ecma\operations\ecma-atomics-object.h" />
+    <ClInclude Include="ecma\operations\ecma-big-uint.h" />
+    <ClInclude Include="ecma\operations\ecma-bigint-object.h" />
+    <ClInclude Include="ecma\operations\ecma-bigint.h" />
+    <ClInclude Include="ecma\operations\ecma-boolean-object.h" />
+    <ClInclude Include="ecma\operations\ecma-comparison.h" />
+    <ClInclude Include="ecma\operations\ecma-container-object.h" />
+    <ClInclude Include="ecma\operations\ecma-conversion.h" />
+    <ClInclude Include="ecma\operations\ecma-dataview-object.h" />
+    <ClInclude Include="ecma\operations\ecma-eval.h" />
+    <ClInclude Include="ecma\operations\ecma-exceptions.h" />
+    <ClInclude Include="ecma\operations\ecma-function-object.h" />
+    <ClInclude Include="ecma\operations\ecma-iterator-object.h" />
+    <ClInclude Include="ecma\operations\ecma-jobqueue.h" />
+    <ClInclude Include="ecma\operations\ecma-lex-env.h" />
+    <ClInclude Include="ecma\operations\ecma-number-object.h" />
+    <ClInclude Include="ecma\operations\ecma-objects-general.h" />
+    <ClInclude Include="ecma\operations\ecma-objects.h" />
+    <ClInclude Include="ecma\operations\ecma-promise-object.h" />
+    <ClInclude Include="ecma\operations\ecma-proxy-object.h" />
+    <ClInclude Include="ecma\operations\ecma-reference.h" />
+    <ClInclude Include="ecma\operations\ecma-regexp-object.h" />
+    <ClInclude Include="ecma\operations\ecma-shared-arraybuffer-object.h" />
+    <ClInclude Include="ecma\operations\ecma-string-object.h" />
+    <ClInclude Include="ecma\operations\ecma-symbol-object.h" />
+    <ClInclude Include="ecma\operations\ecma-typedarray-object.h" />
+    <ClInclude Include="include\jerryscript-compiler.h" />
+    <ClInclude Include="include\jerryscript-core.h" />
+    <ClInclude Include="include\jerryscript-debugger-transport.h" />
+    <ClInclude Include="include\jerryscript-debugger.h" />
+    <ClInclude Include="include\jerryscript-port.h" />
+    <ClInclude Include="include\jerryscript-snapshot.h" />
+    <ClInclude Include="include\jerryscript-types.h" />
+    <ClInclude Include="include\jerryscript.h" />
+    <ClInclude Include="jcontext\jcontext.h" />
+    <ClInclude Include="jmem\jmem-allocator-internal.h" />
+    <ClInclude Include="jmem\jmem.h" />
+    <ClInclude Include="jrt\jrt-bit-fields.h" />
+    <ClInclude Include="jrt\jrt-libc-includes.h" />
+    <ClInclude Include="jrt\jrt-types.h" />
+    <ClInclude Include="jrt\jrt.h" />
+    <ClInclude Include="lit\lit-char-helpers.h" />
+    <ClInclude Include="lit\lit-globals.h" />
+    <ClInclude Include="lit\lit-magic-strings.h" />
+    <ClInclude Include="lit\lit-magic-strings.inc.h" />
+    <ClInclude Include="lit\lit-strings.h" />
+    <ClInclude Include="lit\lit-unicode-conversions-sup.inc.h" />
+    <ClInclude Include="lit\lit-unicode-conversions.inc.h" />
+    <ClInclude Include="lit\lit-unicode-folding.inc.h" />
+    <ClInclude Include="lit\lit-unicode-ranges-sup.inc.h" />
+    <ClInclude Include="lit\lit-unicode-ranges.inc.h" />
+    <ClInclude Include="parser\js\byte-code.h" />
+    <ClInclude Include="parser\js\common.h" />
+    <ClInclude Include="parser\js\js-lexer.h" />
+    <ClInclude Include="parser\js\js-parser-internal.h" />
+    <ClInclude Include="parser\js\js-parser-limits.h" />
+    <ClInclude Include="parser\js\js-parser-tagged-template-literal.h" />
+    <ClInclude Include="parser\js\js-parser.h" />
+    <ClInclude Include="parser\js\js-scanner-internal.h" />
+    <ClInclude Include="parser\js\js-scanner.h" />
+    <ClInclude Include="parser\js\parser-error-messages.inc.h" />
+    <ClInclude Include="parser\js\parser-errors.h" />
+    <ClInclude Include="parser\regexp\re-bytecode.h" />
+    <ClInclude Include="parser\regexp\re-compiler-context.h" />
+    <ClInclude Include="parser\regexp\re-compiler.h" />
+    <ClInclude Include="parser\regexp\re-parser.h" />
+    <ClInclude Include="parser\regexp\re-token.h" />
+    <ClInclude Include="vm\opcodes.h" />
+    <ClInclude Include="vm\vm-defines.h" />
+    <ClInclude Include="vm\vm-stack.h" />
+    <ClInclude Include="vm\vm.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="api\jerry-debugger-transport.c" />
+    <ClCompile Include="api\jerry-debugger.c" />
+    <ClCompile Include="api\jerry-module.c" />
+    <ClCompile Include="api\jerry-snapshot.c" />
+    <ClCompile Include="api\jerryscript.c" />
+    <ClCompile Include="debugger\debugger.c" />
+    <ClCompile Include="ecma\base\ecma-alloc.c" />
+    <ClCompile Include="ecma\base\ecma-errors.c" />
+    <ClCompile Include="ecma\base\ecma-extended-info.c" />
+    <ClCompile Include="ecma\base\ecma-gc.c" />
+    <ClCompile Include="ecma\base\ecma-helpers-collection.c" />
+    <ClCompile Include="ecma\base\ecma-helpers-conversion.c" />
+    <ClCompile Include="ecma\base\ecma-helpers-errol.c" />
+    <ClCompile Include="ecma\base\ecma-helpers-external-pointers.c" />
+    <ClCompile Include="ecma\base\ecma-helpers-number.c" />
+    <ClCompile Include="ecma\base\ecma-helpers-string.c" />
+    <ClCompile Include="ecma\base\ecma-helpers-value.c" />
+    <ClCompile Include="ecma\base\ecma-helpers.c" />
+    <ClCompile Include="ecma\base\ecma-init-finalize.c" />
+    <ClCompile Include="ecma\base\ecma-lcache.c" />
+    <ClCompile Include="ecma\base\ecma-line-info.c" />
+    <ClCompile Include="ecma\base\ecma-literal-storage.c" />
+    <ClCompile Include="ecma\base\ecma-module.c" />
+    <ClCompile Include="ecma\base\ecma-property-hashmap.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-aggregateerror-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-aggregateerror.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-array-iterator-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-array-prototype-unscopables.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-array-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-array.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-arraybuffer-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-arraybuffer.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-async-from-sync-iterator-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-async-function-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-async-function.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-async-generator-function.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-async-generator-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-async-generator.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-async-iterator-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-atomics.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-bigint-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-bigint.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-boolean-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-boolean.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-dataview-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-dataview.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-date-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-date.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-error-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-error.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-evalerror-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-evalerror.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-function-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-function.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-generator-function.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-generator-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-generator.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-global.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-handlers.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-helpers-date.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-helpers-error.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-helpers-json.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-helpers-sort.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-helpers.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-intrinsic.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-iterator-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-json.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-map-iterator-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-map-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-map.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-math.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-number-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-number.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-object-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-object.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-promise-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-promise.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-proxy.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-rangeerror-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-rangeerror.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-referenceerror-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-referenceerror.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-reflect.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-regexp-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-regexp-string-iterator-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-regexp.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-set-iterator-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-set-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-set.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-shared-arraybuffer-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-shared-arraybuffer.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-string-iterator-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-string-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-string.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-symbol-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-symbol.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-syntaxerror-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-syntaxerror.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-type-error-thrower.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-typeerror-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-typeerror.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-urierror-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-urierror.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-weakmap-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-weakmap.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-weakref-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-weakref.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-weakset-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtin-weakset.c" />
+    <ClCompile Include="ecma\builtin-objects\ecma-builtins.c" />
+    <ClCompile Include="ecma\builtin-objects\typedarray\ecma-builtin-bigint64array-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\typedarray\ecma-builtin-bigint64array.c" />
+    <ClCompile Include="ecma\builtin-objects\typedarray\ecma-builtin-biguint64array-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\typedarray\ecma-builtin-biguint64array.c" />
+    <ClCompile Include="ecma\builtin-objects\typedarray\ecma-builtin-float32array-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\typedarray\ecma-builtin-float32array.c" />
+    <ClCompile Include="ecma\builtin-objects\typedarray\ecma-builtin-float64array-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\typedarray\ecma-builtin-float64array.c" />
+    <ClCompile Include="ecma\builtin-objects\typedarray\ecma-builtin-int16array-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\typedarray\ecma-builtin-int16array.c" />
+    <ClCompile Include="ecma\builtin-objects\typedarray\ecma-builtin-int32array-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\typedarray\ecma-builtin-int32array.c" />
+    <ClCompile Include="ecma\builtin-objects\typedarray\ecma-builtin-int8array-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\typedarray\ecma-builtin-int8array.c" />
+    <ClCompile Include="ecma\builtin-objects\typedarray\ecma-builtin-typedarray-helpers.c" />
+    <ClCompile Include="ecma\builtin-objects\typedarray\ecma-builtin-typedarray-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\typedarray\ecma-builtin-typedarray.c" />
+    <ClCompile Include="ecma\builtin-objects\typedarray\ecma-builtin-uint16array-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\typedarray\ecma-builtin-uint16array.c" />
+    <ClCompile Include="ecma\builtin-objects\typedarray\ecma-builtin-uint32array-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\typedarray\ecma-builtin-uint32array.c" />
+    <ClCompile Include="ecma\builtin-objects\typedarray\ecma-builtin-uint8array-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\typedarray\ecma-builtin-uint8array.c" />
+    <ClCompile Include="ecma\builtin-objects\typedarray\ecma-builtin-uint8clampedarray-prototype.c" />
+    <ClCompile Include="ecma\builtin-objects\typedarray\ecma-builtin-uint8clampedarray.c" />
+    <ClCompile Include="ecma\operations\ecma-arguments-object.c" />
+    <ClCompile Include="ecma\operations\ecma-array-object.c" />
+    <ClCompile Include="ecma\operations\ecma-arraybuffer-object.c" />
+    <ClCompile Include="ecma\operations\ecma-async-generator-object.c" />
+    <ClCompile Include="ecma\operations\ecma-atomics-object.c" />
+    <ClCompile Include="ecma\operations\ecma-big-uint.c" />
+    <ClCompile Include="ecma\operations\ecma-bigint-object.c" />
+    <ClCompile Include="ecma\operations\ecma-bigint.c" />
+    <ClCompile Include="ecma\operations\ecma-boolean-object.c" />
+    <ClCompile Include="ecma\operations\ecma-comparison.c" />
+    <ClCompile Include="ecma\operations\ecma-container-object.c" />
+    <ClCompile Include="ecma\operations\ecma-conversion.c" />
+    <ClCompile Include="ecma\operations\ecma-dataview-object.c" />
+    <ClCompile Include="ecma\operations\ecma-eval.c" />
+    <ClCompile Include="ecma\operations\ecma-exceptions.c" />
+    <ClCompile Include="ecma\operations\ecma-function-object.c" />
+    <ClCompile Include="ecma\operations\ecma-get-put-value.c" />
+    <ClCompile Include="ecma\operations\ecma-iterator-object.c" />
+    <ClCompile Include="ecma\operations\ecma-jobqueue.c" />
+    <ClCompile Include="ecma\operations\ecma-lex-env.c" />
+    <ClCompile Include="ecma\operations\ecma-number-object.c" />
+    <ClCompile Include="ecma\operations\ecma-objects-general.c" />
+    <ClCompile Include="ecma\operations\ecma-objects.c" />
+    <ClCompile Include="ecma\operations\ecma-promise-object.c" />
+    <ClCompile Include="ecma\operations\ecma-proxy-object.c" />
+    <ClCompile Include="ecma\operations\ecma-reference.c" />
+    <ClCompile Include="ecma\operations\ecma-regexp-object.c" />
+    <ClCompile Include="ecma\operations\ecma-shared-arraybuffer-object.c" />
+    <ClCompile Include="ecma\operations\ecma-string-object.c" />
+    <ClCompile Include="ecma\operations\ecma-symbol-object.c" />
+    <ClCompile Include="ecma\operations\ecma-typedarray-object.c" />
+    <ClCompile Include="jcontext\jcontext.c" />
+    <ClCompile Include="jmem\jmem-allocator.c" />
+    <ClCompile Include="jmem\jmem-heap.c" />
+    <ClCompile Include="jmem\jmem-poolman.c" />
+    <ClCompile Include="jrt\jrt-fatals.c" />
+    <ClCompile Include="jrt\jrt-logging.c" />
+    <ClCompile Include="lit\lit-char-helpers.c" />
+    <ClCompile Include="lit\lit-magic-strings.c" />
+    <ClCompile Include="lit\lit-strings.c" />
+    <ClCompile Include="parser\js\byte-code.c" />
+    <ClCompile Include="parser\js\common.c" />
+    <ClCompile Include="parser\js\js-lexer.c" />
+    <ClCompile Include="parser\js\js-parser-expr.c" />
+    <ClCompile Include="parser\js\js-parser-line-info-create.c" />
+    <ClCompile Include="parser\js\js-parser-mem.c" />
+    <ClCompile Include="parser\js\js-parser-module.c" />
+    <ClCompile Include="parser\js\js-parser-statm.c" />
+    <ClCompile Include="parser\js\js-parser-tagged-template-literal.c" />
+    <ClCompile Include="parser\js\js-parser-util.c" />
+    <ClCompile Include="parser\js\js-parser.c" />
+    <ClCompile Include="parser\js\js-scanner-ops.c" />
+    <ClCompile Include="parser\js\js-scanner-util.c" />
+    <ClCompile Include="parser\js\js-scanner.c" />
+    <ClCompile Include="parser\js\parser-errors.c" />
+    <ClCompile Include="parser\regexp\re-bytecode.c" />
+    <ClCompile Include="parser\regexp\re-compiler.c" />
+    <ClCompile Include="parser\regexp\re-parser.c" />
+    <ClCompile Include="vm\opcodes-ecma-arithmetics.c" />
+    <ClCompile Include="vm\opcodes-ecma-bitwise.c" />
+    <ClCompile Include="vm\opcodes-ecma-relational-equality.c" />
+    <ClCompile Include="vm\opcodes.c" />
+    <ClCompile Include="vm\vm-stack.c" />
+    <ClCompile Include="vm\vm-utils.c" />
+    <ClCompile Include="vm\vm.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ecma\base\ecma-error-messages.ini" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
